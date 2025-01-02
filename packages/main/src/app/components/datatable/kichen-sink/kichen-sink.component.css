@@ -1,0 +1,4 @@
+/* Điều chỉnh font-size cho các tiêu đề cột nếu cần */
+.td-dataSource {
+  font-size: 0.8rem;
+}

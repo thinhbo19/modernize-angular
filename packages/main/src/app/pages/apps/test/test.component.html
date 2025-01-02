@@ -1,0 +1,50 @@
+<div class="container" cdkDropListGroup>
+  <!-- Danh sách role bên trái -->
+  <div class="left-panel">
+    <h3>Roles</h3>
+    <div cdkDropList [cdkDropListData]="roles">
+      <div *ngFor="let role of roles" cdkDrag>{{ role }}</div>
+    </div>
+  </div>
+
+  <!-- Bảng dữ liệu bên phải -->
+  <div class="right-panel">
+    <h3>User Table</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of data; let i = index">
+          <td>{{ user.Name }}</td>
+          <td>{{ user.Age }}</td>
+          <td>{{ user.Address }}</td>
+          <td>{{ user.Email }}</td>
+          <td>{{ user.Phone }}</td>
+          <td>
+            <!-- Danh sách role được gán -->
+            <div
+              cdkDropList
+              [cdkDropListData]="roles"
+              (cdkDropListDropped)="assignRole($event, i)"
+            >
+              <span *ngFor="let role of user.Role" class="role">
+                {{ role }}
+                <button (click)="removeRole(i, role)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

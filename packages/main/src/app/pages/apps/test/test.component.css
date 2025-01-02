@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.left-panel {
+  width: 25%;
+}
+.right-panel {
+  width: 75%;
+}
+
+.left-panel {
+  border: 1px solid #ccc;
+  padding: 16px;
+  background-color: #f9f9f9;
+}
+
+.right-panel {
+  border: 1px solid #ccc;
+  padding: 16px;
+  background-color: #f9f9f9;
+}
+
+[cdkDropList] {
+  min-height: 150px;
+  padding: 8px;
+}
+
+[cdkDrag] {
+  padding: 8px;
+  margin: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: move;
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.role {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 2px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
